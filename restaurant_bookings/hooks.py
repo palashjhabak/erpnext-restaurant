@@ -107,7 +107,11 @@ app_license = "MIT"
 # 		"restaurant_bookings.tasks.monthly"
 # 	]
 # }
-
+scheduler_events = {
+	"all": [
+		"restaurant_bookings.booking.set_booking_event_day"
+	]
+}
 # Testing
 # -------
 
