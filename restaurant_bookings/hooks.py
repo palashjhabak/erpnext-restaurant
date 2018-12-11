@@ -109,7 +109,7 @@ app_license = "MIT"
 # }
 scheduler_events = {
 	"all": [
-		"restaurant_bookings.booking.set_booking_event_day"
+		"restaurant_bookings.restaurant_bookings.doctype.booking.booking.set_booking_event_day"
 	]
 }
 # Testing

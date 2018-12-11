@@ -11,4 +11,4 @@ class Booking(Document):
 	pass
 
 def set_booking_event_day():
-	frappe.db.sql("""update tabBooking set `event_day` = `Today` where date = CURDATE()""")
+	frappe.db.sql("""update tabBooking set event_day = Today where date = CURDATE()""")
