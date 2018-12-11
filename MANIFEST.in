@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include restaurant_bookings *.css
+recursive-include restaurant_bookings *.csv
+recursive-include restaurant_bookings *.html
+recursive-include restaurant_bookings *.ico
+recursive-include restaurant_bookings *.js
+recursive-include restaurant_bookings *.json
+recursive-include restaurant_bookings *.md
+recursive-include restaurant_bookings *.png
+recursive-include restaurant_bookings *.py
+recursive-include restaurant_bookings *.svg
+recursive-include restaurant_bookings *.txt
+recursive-exclude restaurant_bookings *.pyc

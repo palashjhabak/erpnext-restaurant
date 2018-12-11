@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+restaurant_bookings/docs/current
+*.py~
+conf.py
+locale
+latest_updates.json
+.wnf-lang-status
+*.egg-info
+dist/
+*.swp
