@@ -12,7 +12,7 @@ class Booking(Document):
 		self.set_booking_title()
 
 	def set_booking_title(self):
-		self.custom_title = " ".join(filter(None, [self.booking_type, self.min_people, 'People']))
+		self.custom_title = " ".join(filter(None, [self.booking_type, str(self.min_people), 'People']))
 
 
 def set_booking_event_day():
