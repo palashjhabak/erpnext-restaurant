@@ -1,0 +1,21 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2018-12-12 14:22:33.065091", 
+ "custom_format": 1, 
+ "disabled": 0, 
+ "doc_type": "Booking", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2018-12-12 14:22:55.471764", 
+ "modified_by": "palash@techlift.in", 
+ "module": "Restaurant Bookings", 
+ "name": "1730 Booking New", 
+ "owner": "palash@techlift.in", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}
