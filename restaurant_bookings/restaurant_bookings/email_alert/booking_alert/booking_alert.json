@@ -1,0 +1,30 @@
+{
+ "attach_print": 1, 
+ "creation": "2018-12-13 03:26:28.255508", 
+ "days_in_advance": 0, 
+ "docstatus": 0, 
+ "doctype": "Email Alert", 
+ "document_type": "Booking", 
+ "enabled": 1, 
+ "event": "New", 
+ "idx": 0, 
+ "is_standard": 1, 
+ "message": "Hi {{frappe.db.get_value(\"Contact\", doc.customer, \"first_name\")}} {{frappe.db.get_value(\"Contact\", doc.customer, \"last_name\")}}, <br><br>\n\nThanks for your interest in Cafe 1730. <br><br>\n\nYour booking \"{{doc.custom_title}}\" is confirmed and details of the same are attached in this Email. Should you have any other query, please feel free to contact the manager at +91-8087071730.<br><br>\n\nThanks,<br>\nTeam Cafe-1730<br>\nhttp://cafe1730.com\n", 
+ "modified": "2018-12-13 20:08:28.624949", 
+ "modified_by": "palash@techlift.in", 
+ "module": "Restaurant Bookings", 
+ "name": "Booking Alert", 
+ "owner": "palash@techlift.in", 
+ "print_format": "1730 Booking Latest", 
+ "recipients": [
+  {
+   "cc": "melba@cafe1730.com", 
+   "condition": "", 
+   "email_by_document_field": "email_id_alert"
+  }
+ ], 
+ "sender": "Notifications", 
+ "sender_email": "1730@techlift.in", 
+ "subject": "Cafe 1730 Booking Confirmation", 
+ "value_changed": ""
+}
