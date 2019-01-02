@@ -1,0 +1,31 @@
+{
+ "add_total_row": 0, 
+ "apply_user_permissions": 1, 
+ "creation": "2018-12-23 23:56:10.763463", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 1, 
+ "is_standard": "Yes", 
+ "letter_head": "1730 Letter Head", 
+ "modified": "2018-12-30 11:14:09.281353", 
+ "modified_by": "Administrator", 
+ "module": "Restaurant Bookings", 
+ "name": "New Year Bookings", 
+ "owner": "Administrator", 
+ "query": "select `tabNew Year Booking`.creation, `tabNew Year Booking`.name1 as \"Full Name:Data:150\", mobile as \"Phone:Data:100\", booking_for as \"Party:Data:50\", `tabNew Year Booking`.table as \"Table\", people as \"People#\", couple as \"Couple#\", female_stag as \"F/Stag#\", male_stag as \"M/Stag#\", kids as \"Kids\", total_amount as \"Amount\", total_advance as \"Advance\", total_balance as \"Balance\", coupon as Coupon, `tabIntegration Request`.status as \"\u20b9Status\" from `tabNew Year Booking` LEFT JOIN `tabIntegration Request` ON `tabNew Year Booking`.name = `tabIntegration Request`.reference_docname", 
+ "ref_doctype": "New Year Booking", 
+ "report_name": "New Year Bookings", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }, 
+  {
+   "role": "Restaurant Manager"
+  }, 
+  {
+   "role": "Graphic Designer"
+  }
+ ]
+}
