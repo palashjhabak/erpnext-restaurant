@@ -1,0 +1,18 @@
+{
+ "creation": "2019-01-03 23:15:48.749028", 
+ "docstatus": 0, 
+ "doctype": "Data Migration Plan", 
+ "idx": 4, 
+ "mappings": [
+  {
+   "enabled": 1, 
+   "mapping": "Zomato Order"
+  }
+ ], 
+ "modified": "2019-01-05 01:45:43.729800", 
+ "modified_by": "Administrator", 
+ "module": "Restaurant Bookings", 
+ "name": "Zomato Online Order Sync", 
+ "owner": "Administrator", 
+ "plan_name": "Zomato Online Order Sync"
+}

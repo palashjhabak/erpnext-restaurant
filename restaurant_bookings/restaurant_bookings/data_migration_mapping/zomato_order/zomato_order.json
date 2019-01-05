@@ -1,0 +1,126 @@
+{
+ "condition": "{'res_id': '10987'}", 
+ "creation": "2019-01-03 23:15:44.179344", 
+ "docstatus": 0, 
+ "doctype": "Data Migration Mapping", 
+ "fields": [
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "platform_order_id", 
+   "remote_fieldname": "id"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "phone", 
+   "remote_fieldname": "phone"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "amount", 
+   "remote_fieldname": "totalCost"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "platform", 
+   "remote_fieldname": "\"Zomato\""
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "full_name", 
+   "remote_fieldname": "full_name"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "payment_method", 
+   "remote_fieldname": "payment_method"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "is_phone_verified", 
+   "remote_fieldname": "is_phone_verified"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "latitude", 
+   "remote_fieldname": "latitude"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "longitude", 
+   "remote_fieldname": "longitude"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "deliveryboy_name", 
+   "remote_fieldname": "deliveryboy_name"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "deliveryboy_phone", 
+   "remote_fieldname": "deliveryboy_phone"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "email", 
+   "remote_fieldname": "email"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "instagram", 
+   "remote_fieldname": "instagram"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "twitter", 
+   "remote_fieldname": "twitter"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "website", 
+   "remote_fieldname": "website"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "followers", 
+   "remote_fieldname": "followers"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "profile_image", 
+   "remote_fieldname": "profile_image"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "customer_number_of_orders", 
+   "remote_fieldname": "customer_number_of_orders"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "time", 
+   "remote_fieldname": "time"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "date", 
+   "remote_fieldname": "date"
+  }, 
+  {
+   "is_child_table": 0, 
+   "local_fieldname": "delivery_time", 
+   "remote_fieldname": "delivery_time"
+  }
+ ], 
+ "idx": 0, 
+ "local_doctype": "Online Order", 
+ "local_primary_key": "name", 
+ "mapping_name": "Zomato Order ", 
+ "mapping_type": "Pull", 
+ "migration_id_field": "zomato_online_order_sync_id", 
+ "modified": "2019-01-05 01:45:43.960164", 
+ "modified_by": "Administrator", 
+ "name": "Zomato Order", 
+ "owner": "Administrator", 
+ "page_length": 20, 
+ "remote_objectname": "Zomato Order", 
+ "remote_primary_key": "id"
+}
