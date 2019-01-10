@@ -1,0 +1,24 @@
+{
+ "add_total_row": 0, 
+ "apply_user_permissions": 1, 
+ "creation": "2019-01-10 18:25:44.596390", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2019-01-10 18:30:01.499815", 
+ "modified_by": "Administrator", 
+ "module": "Restaurant Bookings", 
+ "name": "Online Order Details", 
+ "owner": "Administrator", 
+ "query": "select full_name, phone, amount, platform, payment_method date, time from `tabOnline Order` where 1", 
+ "ref_doctype": "Online Order", 
+ "report_name": "Online Order Details", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

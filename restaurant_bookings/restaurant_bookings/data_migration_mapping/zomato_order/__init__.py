@@ -26,11 +26,6 @@ def pre_process(zomato_order):
 	order_lat = float(zomato_order['deliveryAddressObj']['latitude'])
 	order_long = float(zomato_order['deliveryAddressObj']['longitude'])
 
-	print('Distance Lat Long')
-	print(res_lat)
-	print(res_long)
-	print(order_lat)
-	print(order_long)
 	distance_in_km = lat_long_distance(res_lat, order_lat, res_long, order_long)
 
 	subzone_name = ''
@@ -70,3 +65,6 @@ def pre_process(zomato_order):
 	}
 
 	return return_object
+
+def post_process(zomato_order):
+	return

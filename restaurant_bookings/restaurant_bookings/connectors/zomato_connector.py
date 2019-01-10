@@ -9,20 +9,24 @@ class ZomatoConnector(BaseConnection):
 	def __init__(self, connector):
 		self.connector = connector
 		settings = frappe.get_doc('Zomato Sync Settings', None)
-		todays_date = datetime.datetime.now()
-		end_sync_date = todays_date - datetime.timedelta(days=1)
-		end_sync_date = end_sync_date.replace(hour=23, minute=59, second=59)
 
-		last_sync_date_string = settings.last_sync_date
+		start_sync_date_string = settings.start_sync_date
+		start_sync_date = datetime.datetime.strptime(start_sync_date_string, '%Y-%m-%d %H:%M:%S')
+		start_sync_date = start_sync_date.replace(hour=0, minute=0, second=0)
 
-		last_sync_date = datetime.datetime.strptime(last_sync_date_string, '%Y-%m-%d %H:%M:%S')
-		last_sync_date = last_sync_date.replace(hour=0, minute=0, second=0)
+		end_sync_date_string = settings.end_sync_date
 
-		self.start_date = last_sync_date.strftime('%Y-%m-%d %H:%M:%S')
+		if end_sync_date_string:
+			end_sync_date = datetime.datetime.strptime(end_sync_date_string, '%Y-%m-%d %H:%M:%S')
+			end_sync_date = end_sync_date.replace(hour=23, minute=59, second=59)
+		else:
+			todays_date = datetime.datetime.now()
+			end_sync_date = todays_date - datetime.timedelta(days=1)
+			end_sync_date = end_sync_date.replace(hour=23, minute=59, second=59)
+
+		self.start_date = start_sync_date.strftime('%Y-%m-%d %H:%M:%S')
 		self.end_date = end_sync_date.strftime('%Y-%m-%d %H:%M:%S')
 
-		print self.start_date
-		print self.end_date
 		url_login = 'https://www.zomato.com/php/asyncLogin.php'
 		self.name_field = 'id'
 		headers_login = {
@@ -45,7 +49,6 @@ class ZomatoConnector(BaseConnection):
 
 		self.session = requests.Session()
 		login_response = self.session.post(url_login,  headers=headers_login, data=data_login)
-		print(login_response.text)
 
 	def get(self, remote_objectname, fields=None, filters=None, start=0, page_length=10):
 		res_id = filters.get('res_id')
