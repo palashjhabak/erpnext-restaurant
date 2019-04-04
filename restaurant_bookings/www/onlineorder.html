@@ -1,0 +1,758 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<div class="containeabcr">
+        <div id="overLayer" class="overLayer mobile"></div>
+        <div class="align-items-center">
+            <div class="leftPart">
+                <div class="mobibleMenu mobile" onclick="openCatagory(true)"><i class="fas fa-utensils"></i> MENU</div>
+                <div class="fixed" id="openMenu">
+                    <ul>
+                        {% for item_group, items in item_group_wise_dict.items() %}
+                        <li onclick="openCatagory()" class="active"><a href="#{{item_group}}">{{item_group}} <span class="mobile">(12)</span></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="centerPart itemBox">
+                <div class="catagorys recommended" id="recommended">
+                    <h2>Recommended</h2>
+                    <h3>12 ITEM</h3>
+		   
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count active">
+                                    <div class="add">ADD</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                                <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                                <div class="nonveg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+                    <div class="itemList center">
+                        <img height="150" width="200" alt=""
+                            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                            <div class="subname">Specials</div>
+                            <div class="priceView"><span class="price">50</span></div>
+                        </div>
+
+                    </div>
+                </div>
+                {% for item_group, items in item_group_wise_dict.items() %}
+                    <div class="catagorys" id="{{item_group}}">
+                        <h2>{{item_group}}</h2>
+                        <h3>{{items|length}} Items</h3>
+
+                        {% for item in items %}
+                        <div class="itemList center">
+                                <div class="center">
+                                    <div>
+                                        <div class="count">
+                                            <div class="add">ADD</div>
+                                            <div class="plus">+</div>
+                                            <div class="cont">1</div>
+                                            <div class="minus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                                    <div class="name">{{item.item_name}}</div>
+                                    <!-- ?~B? -->
+                                    <div class="priceView"><span class="price">{{item.standard_rate}}</span></div>
+                                </div>
+    
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="rightPart itemBox">
+                <div class="fixed destop">
+                    <h2>Cart</h2>
+                    <h3>1 ITEM</h3>
+                    <div class="itemList">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                                <div class="right"><span class="price">50</span></div>
+                            </div>
+                        </div>
+
+                        <div class="left">
+                                <div class="veg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                        </div>
+
+                    </div>
+
+                    <div class="itemList">
+                        <div class="center">
+                            <div>
+                                <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus">+</div>
+                                    <div class="cont">1</div>
+                                    <div class="minus"></div>
+                                </div>
+                                <div class="right"><span class="price">50</span></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="nonveg"><i class="fas fa-stop-circle"></i></div>
+                            <div class="name">Idli</div>
+                        </div>
+
+                    </div>
+
+                    <div class="EEeV3">
+                        <div class="_161V3">
+                            <div class="_1DWmI">Subtotal</div>
+                            <div><span class="QK9kr">₹ 170</span><span>₹ 136</span></div>
+                        </div>
+                        <div class="_26NCu">Extra charges may apply</div>
+                        <div class="_1gPB7">Checkout →</div>
+                    </div>
+
+                </div>
+
+                <div class="mobile">
+                    <div class="left">2 Items<span>|</span><span class="rate">145</span></div>
+                    <div class="right">View Cart <i class="fas fa-cart-plus"></i> </div>
+                </div>
+            </div>
+	    <div class="cBoth"></div>
+        </div>
+<style>
+       body{
+                margin: 0;
+                padding: 0;
+            }
+       .cBoth{
+       clear:both;}
+            .container {
+                color: #282c3f;
+                font-size: 17px;
+            }
+
+
+            .leftPart .fixed:after {
+                content: " ";
+                position: absolute;
+                top: -21px;
+                bottom: 0;
+                right: 0;
+            }
+
+            .leftPart {
+                height: calc(100vh - 150px);
+                margin-top: 20px;
+                width: 150px;
+                float: left;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+	   .leftPart .fixed {
+                position: fixed;
+                width: 150px;
+                height: 100%;
+            }
+
+            .rightPart {
+                height: calc(100vh - 150px);
+                margin-top: 20px;
+                width: 250px;
+                float: right;
+            }
+		
+	    .rightPart .fixed {
+                position: fixed;
+                width: 250px;
+                height: 100%;
+            }
+
+            .centerPart {
+                width: calc(100% - 400px);;
+                float: left;
+            }
+
+            .leftPart ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .leftPart ul li {
+                padding-right: 20px;
+            }
+
+            .leftPart ul li a {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                display: block;
+                font-size: 15px;
+                color: #282c3f;
+                padding-top: 5px;
+                font-weight: 400;
+                text-align: right;
+                text-decoration: none;
+            }
+
+            .leftPart ul li a:hover {
+                color: #fc8019;
+                text-decoration: none;
+            }
+
+            /* .leftPart ul li.active {
+                border-right: solid 4px #fc8019;
+            }
+
+            .leftPart ul li.active a {
+                color: #fc8019;
+                font-weight: bold;
+                text-decoration: none;
+            } */
+
+            .rightPart ._161V3 {
+                color: #3d4152;
+                font-size: 15px;
+                font-weight: 600;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .rightPart ._1DWmI {
+                font-size: 17px;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            .rightPart .QK9kr {
+                color: #bebfc5;
+                text-decoration: line-through;
+                margin-right: 10px;
+            }
+
+            .rightPart ._26NCu {
+                font-size: 13px;
+                font-weight: 300;
+                color: #7e808c;
+                margin-top: 2px;
+            }
+
+            .rightPart ._1gPB7 {
+                height: 50px;
+                background-color: #60b246;
+                outline: 0;
+                cursor: pointer;
+                border: 0;
+                color: #fff;
+                margin-top: 28px;
+                text-transform: uppercase;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .itemBox h2 {
+                font-size: 32px;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+            }
+
+            .itemBox .itemList.center {
+                position: relative;
+                padding-bottom: 25px;
+                border-bottom: 1px solid #e9e9eb;
+            }
+
+            .itemBox h3 {
+                font-weight: 500;
+                font-size: 13px;
+                color: #686b78;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+                padding-top: 2px;
+            }
+
+            .itemBox .catagorys {
+                border-bottom: 2px solid #282c3f;
+                margin-top: 23px;
+                clear: both;
+                float: left;
+                padding: 0 10px;
+                width: calc(100% - 20px);
+            }
+
+            .itemBox .recommended .itemList {
+                float: left;
+                width: 48%;
+                margin: 1%;
+                border-bottom: none;
+            }
+
+            .itemBox .recommended img {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            .itemBox .itemList {
+                position: relative;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .itemBox .itemList .left {
+                margin-right: 120px;
+            }
+
+
+            .itemBox .itemList .left .veg {
+                position: relative;
+                float: left;
+                display: inline-block;
+            }
+            .itemBox .itemList .left .veg i{
+                color: #60b246;
+            }
+            .itemBox .itemList .left .nonveg {
+                position: relative;
+                float: left;
+                display: inline-block;
+            }
+            .itemBox .itemList .left .nonveg i{
+                color: #ff0000;
+            }
+
+            .itemBox .itemList .left .name {
+                font-size: 14px;
+                font-weight: 400;
+                margin-left: 20px;
+                margin-right: 5px;
+                flex-grow: 1;
+            }
+
+            .itemBox .itemList .center {
+                width: 120px;
+                float: right;
+            }
+
+            .itemBox .itemList .center>div {
+                float: right;
+                display: flex;
+                align-items: center;
+            }
+
+            .itemBox .itemList .center>div .count {
+                display: inline-block;
+                height: 30px;
+                width: 70px;
+                border: 1px solid #d4d5d9;
+                color: #60b246;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 30px;
+                position: relative;
+                text-align: center;
+                background-color: #fff;
+                display: block;
+            }
+
+            .itemBox .itemList .center>div .count .add {
+                opacity: 0;
+                color: #60b246;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            .itemBox .itemList .center>div .count .add:hover {
+                position: relative;
+                box-shadow: 0 2px 8px #d4d5d9
+            }
+
+            .itemBox .plus {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 33.33333%;
+                display: inline-block;
+                opacity: 1;
+                transform: translateZ(0);
+                cursor: pointer;
+                font-size: 150%;
+                font-weight: 600;
+            }
+
+            .itemBox .minus:before {
+                content: "";
+                display: inline-block;
+                height: 2px;
+                width: 10px;
+                background-color: #bebfc5;
+                position: relative;
+                top: -6px;
+            }
+
+            .itemBox .minus {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 33.33333%;
+                display: inline-block;
+                opacity: 1;
+                transform: translateZ(0);
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+
+            .itemBox .cont {
+                position: absolute;
+                left: 33.33333%;
+                top: 0;
+                width: 33.33333%;
+                display: inline-block;
+                opacity: 1;
+                transform: translateZ(0);
+                cursor: pointer;
+            }
+
+            .itemBox .count.active .add {
+                opacity: 1 !important;
+            }
+
+            .itemBox .subname {
+                margin-left: 15px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 13px;
+                color: #7e808c;
+                text-transform: capitalize;
+            }
+
+            .itemBox .priceView {
+                margin-left: 15px;
+            }
+
+            .itemBox .itemList .center>div .right {
+                font-size: 13px;
+                color: #535665;
+                text-align: right;
+                width: 45px;
+            }
+
+            .itemBox .itemList .price:before {
+                content: "\20B9";
+            }
+
+            .destop {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .destop {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                }
+
+                .itemBox h2 {
+                    font-size: 17px;
+                    padding-top: 20px;
+                }
+
+                .fixed {
+                    width: 100%;
+                    background: #60b246;
+                }
+
+                .centerPart {
+                    background: #f2f2f2;
+                    height: inherit;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .itemBox .catagorys {
+                    background: #fff;
+                    padding: 0 10px;
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    border-bottom: none;
+                }
+
+		.itemBox .recommended img{
+			height:100px;
+		}
+                .rightPart {
+                    height: 40px;
+                    width: 100%;
+                    margin: 0px;
+                    position: fixed;
+                    top: inherit;
+                    bottom: 0;
+                    background: #60b246;
+                    color: #fff;
+                    padding: 10px;
+		    z-index: 9999;
+                }
+
+                .rightPart .left {
+                    float: left;
+                }
+
+                .rightPart .left span {
+                    margin: 0 5px;
+                }
+
+                .rightPart .left span.rate:before {
+                    content: '\20B9';
+                    margin-right: .1rem;
+                }
+
+                .rightPart .right {
+                    float: right;
+                }
+                .centerPart {
+                    width: 100%;
+                }
+                .leftPart {
+                    height: 70px;
+                    width: 100%;
+                    margin: 0px;
+                    position: fixed;
+                    top: inherit;
+                    bottom: 50px;
+                    z-index: 99999999;
+                    color: #fff;
+                    padding: 10px;
+                }
+
+                .leftPart .fixed {
+                    display: none;
+                }
+
+                .leftPart .openCatagory {
+                    display: block;
+                }
+
+                .overLayer.active {
+                    z-index: 2;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(40, 44, 62, .6);
+                }
+
+                .openCatagory {
+                    padding: 20px;
+                    max-height: 200px;
+                    width: 80%!important;
+                    left: 10%;
+                    background: #fff;
+                    position: fixed;
+                    bottom: 60px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                }
+                .leftPart .fixed:after{
+                    border: none;
+                }
+                .leftPart ul li.active{
+                    border: none;
+                    
+                }
+                .leftPart ul li a{
+                    font-weight: normal;
+                    color: #282c3f;
+                    text-align: left;
+                    display: block;
+                }
+                .leftPart ul li a span{
+                    display: inline-block;
+                    text-align: right;
+                    float: right;
+                }
+
+                .mobibleMenu {
+                    width: 110px;
+                    height: 40px;
+                    border-radius: 30px;
+                    background: #5d8ed5;
+                    color: #fff;
+                    text-align: center;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 2px 1px 0 rgba(93, 141, 213, .2);
+                    padding: 14px;
+                    font-weight: 600;
+                    font-size: .93rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+                .mobibleMenu i {
+                    margin-right: 5px;
+               	}
+		.container{
+		   margin:0;
+		}
+		.page_content{
+                   margin:0;
+                padding:0;
+                }
+		.align-items-center{
+			margin:0 -15px;
+		}
+
+            }
+    </style>
+    <script>
+        function openCatagory(type) {
+            var element = document.getElementById("openMenu");
+            var element1 = document.getElementById("overLayer");
+            if(type){
+                element.classList.add("openCatagory");
+                element1.classList.add("active");
+            }else{
+                element.classList.remove("openCatagory");
+                element1.classList.remove("active");
+            }
+           
+            
+        }
+    </script>
