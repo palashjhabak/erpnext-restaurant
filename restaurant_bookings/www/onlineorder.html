@@ -16,7 +16,6 @@
                 <div class="catagorys recommended" id="recommended">
                     <h2>Recommended</h2>
                     <h3>12 ITEM</h3>
-		   
                     <div class="itemList center">
                         <img height="150" width="200" alt=""
                             src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/xgtcy6ydlvcw7j0llzre">
@@ -147,21 +146,21 @@
                     </div>
                 </div>
                 {% for item_group, items in item_group_wise_dict.items() %}
+		{% set outer_loop = loop %}
                     <div class="catagorys" id="{{item_group}}">
                         <h2>{{item_group}}</h2>
                         <h3>{{items|length}} Items</h3>
-
                         {% for item in items %}
                         <div class="itemList center">
                                 <div class="center">
                                     <div>
-                                        <div class="count">
-                                            <div class="add">ADD</div>
-                                            <div class="plus">+</div>
-                                            <div class="cont">1</div>
-                                            <div class="minus"></div>
-                                        </div>
-                                    </div>
+					    <div class="count">
+                                    <div class="add">ADD</div>
+                                    <div class="plus" onclick="plus('count_{{outer_loop.index}}_{{loop.index}}')">+</div>
+                                    <input type="text" size="25" value="1" id="count_{{outer_loop.index}}_{{loop.index}}"  class="cont">
+                                    <div class="minus" onclick="minus('count_{{outer_loop.index}}_{{loop.index}}')"></div>
+                               </div>
+					    </div>
                                 </div>
                                 <div class="left">
                                     <div class="veg"><i class="fas fa-stop-circle"></i></div>
@@ -184,9 +183,9 @@
                             <div>
                                 <div class="count">
                                     <div class="add">ADD</div>
-                                    <div class="plus">+</div>
-                                    <div class="cont">1</div>
-                                    <div class="minus"></div>
+                                    <div class="plus" onclick="plus('count01')">+</div>
+				    <input type="text" size="25" value="1" id="count01"  class="cont">
+                                    <div class="minus" onclick="minus('count01')"></div>
                                 </div>
                                 <div class="right"><span class="price">50</span></div>
                             </div>
@@ -201,12 +200,12 @@
 
                     <div class="itemList">
                         <div class="center">
-                            <div>
-                                <div class="count">
+				<div>
+				    <div class="count">
                                     <div class="add">ADD</div>
-                                    <div class="plus">+</div>
-                                    <div class="cont">1</div>
-                                    <div class="minus"></div>
+                                    <div class="plus" onclick="plus('count02')">+</div>
+                                    <input type="text" size="25" value="1" id="count02"  class="cont">
+                                    <div class="minus" onclick="minus('count02')"></div>
                                 </div>
                                 <div class="right"><span class="price">50</span></div>
                             </div>
@@ -540,6 +539,9 @@
                 opacity: 1;
                 transform: translateZ(0);
                 cursor: pointer;
+			border: none;
+                height: 28px;
+                text-align: center;
             }
 
             .itemBox .count.active .add {
@@ -570,6 +572,16 @@
             .itemBox .itemList .price:before {
                 content: "\20B9";
             }
+		
+	    header{
+		    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+	    }
+	    .containeabcr{
+		        margin-top: 25px;
+	    }
 
             .destop {
                 display: block;
@@ -751,8 +763,20 @@
             }else{
                 element.classList.remove("openCatagory");
                 element1.classList.remove("active");
-            }
-           
-            
+            }          
         }
+	function plus(count){
+           var countEl = document.getElementById(count);
+	   var count = countEl.value
+	   count++;
+           countEl.value = count;
+         }
+    function minus(count){
+      var countEl = document.getElementById(count);
+      var count = countEl.value
+      if (count > 1) {
+        count--;
+        countEl.value = count;
+      }
+    }
     </script>
