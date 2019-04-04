@@ -2,8 +2,6 @@ import frappe
 
 def get_context(context):
         context.parameter_name = frappe.request.url
-        # frappe.session['username'] = 'testUsere'
-        # print(frappe.session)
 	items = frappe.get_all('Item', fields=['name','item_name', 'standard_rate', 'description', 'item_group'])
 	item_group_wise_dict = {}
 	for item in items:
