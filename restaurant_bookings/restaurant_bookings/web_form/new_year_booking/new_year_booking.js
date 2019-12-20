@@ -98,15 +98,19 @@
 // })
 alert('ggggggg')
 
-frappe.web_form.on('name1', (field, value) => {
-    if (value < 1000) {
-        frappe.web_form.set_df_property('rate', 'hidden', 1);
-    }
-});
+frappe.web_form.after_load = () {
+    frappe.web_form.on('name1', (field, value) => {
+		if (value < 1000) {
+			frappe.web_form.set_df_property('rate', 'hidden', 1);
+		}
+	});
+	
+	
+	frappe.web_form.on('couple', (field, value) => {
+		if (value < 1000) {
+			frappe.web_form.set_df_property('rate', 'hidden', 1);
+		}
+	});
+}
 
 
-frappe.web_form.on('couple', (field, value) => {
-    if (value < 1000) {
-        frappe.web_form.set_df_property('rate', 'hidden', 1);
-    }
-});
