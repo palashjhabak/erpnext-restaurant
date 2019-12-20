@@ -98,9 +98,13 @@
 // })
 alert('ggggggg')
 
-frappe.web_form.after_load = () => {
-    frappe.msgprint('Please fill all values carefully');
-}
+frappe.ready(function() {
+	frappe.msgprint('Please fill all values carefully');
+	// bind events here
+})
+// frappe.web_form.after_load = () => {
+//     frappe.msgprint('Please fill all values carefully');
+// }
 // frappe.web_form.after_load = () => {
 //     frappe.web_form.on('name1', (field, value) => {
 // 		if (value < 1000) {
