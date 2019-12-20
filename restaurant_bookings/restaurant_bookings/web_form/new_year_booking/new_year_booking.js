@@ -101,15 +101,11 @@ alert('ggggggg')
 frappe.ready(function() {
 	frappe.msgprint('Please fill all values carefully');
 	frappe.web_form.on('name1', (field, value) => {
-		if (value < 1000) {
-			frappe.web_form.set_df_property('rate', 'hidden', 1);
-		}
+		alert('ggf')
 	});	
 	
 	frappe.web_form.on('couple', (field, value) => {
-		if (value < 1000) {
-			frappe.web_form.set_df_property('rate', 'hidden', 1);
-		}
+		alert('jjjkjkjkj')
 	});
 	// bind events here
 })
