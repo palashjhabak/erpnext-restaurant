@@ -97,9 +97,6 @@
 // 	}
 // })
 alert('ggggggg')
-frappe.web_form.on('name1', (field, value) => {
-	alert('ggg');
-})
 
 frappe.web_form.on('name1', (field, value) => {
     if (value < 1000) {
