@@ -96,3 +96,7 @@
 // 		$('[for=total_amount]')[0].innerText = text
 // 	}
 // })
+
+frappe.web_form.on('name1', (field, name) => {
+	alert('ggg')
+})
