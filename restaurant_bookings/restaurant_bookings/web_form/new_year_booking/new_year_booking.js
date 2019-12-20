@@ -3,46 +3,46 @@ frappe.ready(function() {
 })
 
 function hideShow() {
-	$('input[name="total_amount"]').val('')
-	$('input[name="total_advance"]').val('')
-	$('input[name="total_balance"]').val('')
-	$('[name=couple], [name=kids], [name=male_stag], [name=female_stag], [name=people]').val('')
-	let party = $('select[name=booking_for]')[0].value
+	$('input[data-fieldname="total_amount"]').val('')
+	$('input[data-fieldname="total_advance"]').val('')
+	$('input[data-fieldname="total_balance"]').val('')
+	$('[data-fieldname=couple], [data-fieldname=kids], [data-fieldname=male_stag], [data-fieldname=female_stag], [data-fieldname=people]').val('')
+	let party = $('select[data-fieldname=booking_for]')[0].value
 	if(party === 'Sunset Party on 30th December') {
-		$('[name=couple], [name=kids], [name=male_stag], [name=female_stag]').hide()
-		$('[name=people]').show()
+		$('[data-fieldname=couple], [data-fieldname=kids], [data-fieldname=male_stag], [data-fieldname=female_stag]').hide()
+		$('[data-fieldname=people]').show()
 		$('[for=couple], [for=kids], [for=male_stag], [for=female_stag], [for=table]').hide()
 		$('[for=people]').show()
-		$('select[name=table]').hide()
+		$('select[data-fieldname=table]').hide()
 		$('[for=pay_advance]').hide()
-		$('[name=pay_advance]').hide()
+		$('[data-fieldname=pay_advance]').hide()
 	} else {
-		$('[name=couple], [name=kids], [name=male_stag], [name=female_stag]').show()
-		$('[name=people]').hide()
+		$('[data-fieldname=couple], [data-fieldname=kids], [data-fieldname=male_stag], [data-fieldname=female_stag]').show()
+		$('[data-fieldname=people]').hide()
 		$('[for=couple], [for=kids], [for=male_stag], [for=female_stag], [for=table]').show()
 		$('[for=people]').hide()
-		$('select[name=table]').show()
+		$('select[data-fieldname=table]').show()
 		$('[for=pay_advance]').show()
-		$('[name=pay_advance]').show()
+		$('[data-fieldname=pay_advance]').show()
 
 	}
 }
 hideShow()
 
-$('[name=coupon]').on('input', function(){
+$('[data-fieldname=coupon]').on('input', function(){
 	totalAmount()
 })
 
 function totalAmount() {
 	let total
 	let advance_total
-	var party = $('select[name=booking_for]')[0].value
+	var party = $('select[data-fieldname=booking_for]')[0].value
 	if(party === 'Sunset Party on 30th December'){
-		total = $('select[name="people"]')[0].value * 500
+		total = $('select[data-fieldname="people"]')[0].value * 500
 	} else {
-		total = $('select[name="kids"]')[0].value*500 + $('select[name="couple"]')[0].value*3000+ $('select[name="female_stag"]')[0].value*1000 + $('select[name="male_stag"]')[0].value*2000
+		total = $('select[data-fieldname="kids"]')[0].value*500 + $('select[data-fieldname="couple"]')[0].value*3000+ $('select[data-fieldname="female_stag"]')[0].value*1000 + $('select[data-fieldname="male_stag"]')[0].value*2000
 	}
-	let coupon = $('[name=coupon]')[0].value
+	let coupon = $('[data-fieldname=coupon]')[0].value
 	if(coupon.toLowerCase() === 'bop') {
 		total = total - .05*total
 	}
@@ -56,11 +56,11 @@ function totalAmount() {
 		total = total - .2*total
 	}
 
-	if($('select[name=table]')[0].value == 'Yes' && party != "Sunset Party on 30th December") {
+	if($('select[data-fieldname=table]')[0].value == 'Yes' && party != "Sunset Party on 30th December") {
 		total = total + .5 * total
 	}
 
-	let advance = $('[name=pay_advance]')[0].value
+	let advance = $('[data-fieldname=pay_advance]')[0].value
 	if(advance == '20%'){
 		advance_total = 0.2*total
 	}
@@ -72,27 +72,27 @@ function totalAmount() {
 	}
 
 	advance_total = (party === 'Sunset Party on 30th December') ? total : advance_total
-	$('input[name="total_amount"]').val(total)
-	$('input[name="total_advance"]').val(advance_total)
-	$('input[name="total_balance"]').val(total - advance_total)
+	$('input[data-fieldname="total_amount"]').val(total)
+	$('input[data-fieldname="total_advance"]').val(advance_total)
+	$('input[data-fieldname="total_balance"]').val(total - advance_total)
 
 	//return total
 }
 
-$('select[name=booking_for]').on('change', function(){
-	$('select[name=table]')[0].value = "No"
+$('select[data-fieldname=booking_for]').on('change', function(){
+	$('select[data-fieldname=table]')[0].value = "No"
 	hideShow()
 })
 
-$('[name=table], [name=couple], [name=people], [name=kids], [name=female_stag], [name=male_stag], [name=pay_advance]').on('change', function(){
+$('[data-fieldname=table], [data-fieldname=couple], [data-fieldname=people], [data-fieldname=kids], [data-fieldname=female_stag], [data-fieldname=male_stag], [data-fieldname=pay_advance]').on('change', function(){
 	totalAmount()
-	if($('select[name=table]')[0].value == 'Yes'){
-		let party = $('select[name=booking_for]')[0].value
-		let text = (party != "Sunset Party on 30th December") ? "Total " + $('[name=pay_advance]')[0].value + " Advance (Table Guaranteed)" : "Total (Table Guaranteed)"
+	if($('select[data-fieldname=table]')[0].value == 'Yes'){
+		let party = $('select[data-fieldname=booking_for]')[0].value
+		let text = (party != "Sunset Party on 30th December") ? "Total " + $('[data-fieldname=pay_advance]')[0].value + " Advance (Table Guaranteed)" : "Total (Table Guaranteed)"
 		$('[for=total_amount]')[0].innerText = text
 	} else {
-		let party = $('select[name=booking_for]')[0].value
-		let text = (party != "Sunset Party on 30th December") ? "Total " + $('[name=pay_advance]')[0].value + " Advance (Table First come first serve)" : "Total (Table first come first serve)"
+		let party = $('select[data-fieldname=booking_for]')[0].value
+		let text = (party != "Sunset Party on 30th December") ? "Total " + $('[data-fieldname=pay_advance]')[0].value + " Advance (Table First come first serve)" : "Total (Table first come first serve)"
 		$('[for=total_amount]')[0].innerText = text
 	}
 })
